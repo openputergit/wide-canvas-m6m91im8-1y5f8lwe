@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertigo IT Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#7c3aed',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #2563eb, #7c3aed);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        .scroll-hidden::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold gradient-text">Vertigo IT</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-primary transition-colors">Home</a>
+                    <a href="#services" class="hover:text-primary transition-colors">Services</a>
+                    <a href="#portfolio" class="hover:text-primary transition-colors">Portfolio</a>
+                    <a href="#testimonials" class="hover:text-primary transition-colors">Testimonials</a>
+                    <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden" onclick="toggleMenu()">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white p-4">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="hover:text-primary transition-colors">Home</a>
+                <a href="#services" class="hover:text-primary transition-colors">Services</a>
+                <a href="#portfolio" class="hover:text-primary transition-colors">Portfolio</a>
+                <a href="#testimonials" class="hover:text-primary transition-colors">Testimonials</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-12 md:pt-32 md:pb-24">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                        Transform Your Digital Presence with
+                        <span class="gradient-text">Innovative Solutions</span>
+                    </h1>
+                    <p class="text-gray-600 mb-8">
+                        We craft cutting-edge software solutions and implement strategic digital marketing campaigns to help your business thrive in the digital age.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-primary text-white px-8 py-3 rounded-full hover:bg-primary/90 transition-colors">
+                            Get Started
+                        </a>
+                        <a href="#services" class="border-2 border-primary text-primary px-8 py-3 rounded-full hover:bg-primary hover:text-white transition-colors">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80" 
+                         alt="Digital Solutions" 
+                         class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="service-card bg-white p-6 rounded-lg shadow-lg">
+                    <i class="bi bi-code-slash text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">Web Development</h3>
+                    <p class="text-gray-600">Custom web solutions built with cutting-edge technologies to deliver exceptional user experiences.</p>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg shadow-lg">
+                    <i class="bi bi-phone text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">App Development</h3>
+                    <p class="text-gray-600">Native and cross-platform mobile applications that engage users and drive business growth.</p>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg shadow-lg">
+                    <i class="bi bi-graph-up text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">Digital Marketing</h3>
+                    <p class="text-gray-600">Strategic SEO, content marketing, and social media campaigns to boost your online presence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Our Portfolio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group relative overflow-hidden rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80" 
+                         alt="Project 1" 
+                         class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="absolute bottom-0 p-6">
+                            <h3 class="text-white text-xl font-bold">E-commerce Platform</h3>
+                            <p class="text-white/80">Web Development</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more portfolio items similarly -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Client Testimonials</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-bold">John Smith</h4>
+                            <p class="text-gray-600">CEO, Tech Corp</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Vertigo IT Solutions transformed our digital presence. Their expertise in web development and digital marketing helped us achieve remarkable growth."</p>
+                </div>
+                <!-- Add more testimonials similarly -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Get In Touch</h2>
+            <div class="max-w-2xl mx-auto">
+                <form class="space-y-6" onsubmit="handleSubmit(event)">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                        <input type="text" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                        <input type="email" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                        <textarea rows="4" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Vertigo IT</h3>
+                    <p class="text-gray-400">Transforming businesses through innovative digital solutions.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Web Development</li>
+                        <li>App Development</li>
+                        <li>Digital Marketing</li>
+                        <li>UI/UX Design</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>info@vertigo.com</li>
+                        <li>+1 234 567 890</li>
+                        <li>123 Tech Street</li>
+                        <li>Silicon Valley, CA</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-primary transition-colors">
+                            <i class="bi bi-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-primary transition-colors">
+                            <i class="bi bi-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-primary transition-colors">
+                            <i class="bi bi-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-primary transition-colors">
+                            <i class="bi bi-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Vertigo IT Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            // Add your form submission logic here
+            alert('Thank you for your message! We will get back to you soon.');
+            event.target.reset();
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobileMenu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    toggleMenu();
+                }
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
